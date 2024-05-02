@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from .forms import AnimeForm
+from . import models
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'animeapp/anime/home.html')
+    animes = models.Anime.objects.all()
+    return render(request, 'animeapp/anime/home.html', {'animes': animes})
 
 
 def add_anime(request):

@@ -7,7 +7,7 @@ class Anime(models.Model):
     release_date = models.DateField(blank=True, null=True)
     studio = models.ForeignKey('Studio', on_delete=models.CASCADE, default=None)
     resume = models.TextField(null=True, blank=True)
-    duration = models.DurationField(blank=True, null=True)
+    duration = models.CharField(max_length=100, default=None)
 
     def __str__(self):
         return f"{self.title}, {self.release_date}, {self.resume}, {self.studio}, {self.duration}"
@@ -19,4 +19,4 @@ class Studio(models.Model):
     address = models.TextField(null=True, blank=False)
 
     def __str__(self):
-        return f"{self.name}, {self.creation_date}, {self.address}"
+        return f"{self.name}"
