@@ -4,13 +4,12 @@
 {% block content %}
 {{block.super}}
 <h1> Bienvenue sur Animetheque </h1>
-<p> Vous pouvez rechercher des animes par titre, genre, studio, année de sortie, etc. </p>
+<p> Vous pouvez voir tout les animes et leurs studios associés. </p>
 
-<form method="get" action="#">
-    <input type="text" name="search" placeholder="Rechercher un anime">
-    <input type="submit" value="Rechercher">
-</form>
+<!-- propose un lien vers la page de liste des animes -->
+<a href="anime"> Liste des animes </a>
 
-{ if search }
+<!-- propose un lien vers la page de liste des studios -->
+<a href="studio"> Liste des studios </a>
 
 {% endblock %}

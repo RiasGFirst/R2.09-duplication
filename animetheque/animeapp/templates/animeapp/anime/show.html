@@ -1,0 +1,13 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | {{anime.title}} {% endblock %}
+
+{% block content %}
+<h1>{{anime.title}}</h1>
+<p>Studio: {{anime.studio}}</p>
+<p>Année de sortie: {{anime.release_date}}</p>
+<p>Duration: {{anime.duration}}</p>
+<p>Resume: {{anime.resume}}</p>
+<a href="/anime/update/{{anime.id}}"> Modifier </a>
+<a href="/anime/delete/{{anime.id}}"> Supprimer </a>
+<a href="/anime"> Retour à la liste des animes </a>
+{% endblock %}

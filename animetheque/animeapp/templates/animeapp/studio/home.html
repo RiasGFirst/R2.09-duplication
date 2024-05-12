@@ -19,9 +19,16 @@
             <td> {{ studio.name }} </td>
             <td> {{ studio.creation_date }} </td>
             <td> {{ studio.address }} </td>
+            <td> <a href="/studio/show/{{studio.id}}"> Afficher </a> </td>
+            <td> <a href="/studio/update/{{studio.id}}"> Modifier </a> </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+<br>
+<a href="/studio/add"> Ajouter un studios </a>
+<!-- proposer un lien vers studio -->
+<a href="/anime"> Voir les animes </a>
+<a href="/"> Revenir à la page principale </a>
 
 {% endblock %}

@@ -19,10 +19,16 @@
             <td> {{anime.title}} </td>
             <td> {{anime.studio}} </td>
             <td> {{anime.release_date}} </td>
-            <td> <a href="/anime/{{anime.id}}"> Afficher </a> </td>
+            <td> <a href="/anime/show/{{anime.id}}"> Afficher </a> </td>
+            <td> <a href="/anime/update/{{anime.id}}"> Modifier </a> </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+<br>
+<a href="/anime/add"> Ajouter un anime </a>
+<!-- proposer un lien vers studio -->
+<a href="/studio"> Voir les studios </a>
+<a href="/"> Revenir à la page principale </a>
 
 {% endblock %}

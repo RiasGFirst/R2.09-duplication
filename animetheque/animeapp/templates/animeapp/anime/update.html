@@ -1,0 +1,12 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | Modifier un anime {% endblock %}
+
+{% block content %}
+<h1>Modifier l'anime {{anime.title}}</h1>
+
+<form method="post" action="/anime/processing_update/{{anime.id}}/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Mettre à jour"/>
+</form>
+{% endblock %}

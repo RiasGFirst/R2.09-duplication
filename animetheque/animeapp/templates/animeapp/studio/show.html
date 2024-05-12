@@ -1,0 +1,11 @@
+{% extends "animeapp/template.html" %}
+{% block title %} Animetheque | {{studio.title}} {% endblock %}
+
+{% block content %}
+<h1>{{studio.name}}</h1>
+<p>Creation date: {{studio.creation_date}}</p>
+<p>Addresse: {{studio.address}}</p>
+<a href="/studio/update/{{studio.id}}"> Modifier </a>
+<a href="/studio/delete/{{studio.id}}"> Supprimer </a>
+<a href="/studio"> Retour à la liste des studios </a>
+{% endblock %}
